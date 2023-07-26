@@ -1,0 +1,59 @@
+/* framework  */
+
+.border-blue{
+    border: 4px solid #2196f3;
+}
+.bg-ccc{
+    background-color: #F6F6F6;
+   
+}
+
+.bg-front{
+    background-color: #333;
+}
+.bg-back{
+    background-color: #607D8B;
+}
+
+/* some properties  */
+
+.splash-screen{
+    background-color: #eeeeee9c; 
+    z-index: 2;
+}
+
+.game-block{
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.game-block>div{
+    backface-visibility: hidden;
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+
+.back img{
+    width: 100px;
+    margin-top: 25px;
+}
+
+.is-flipped,
+.has-matched{
+    transform: rotateY(180deg);
+}
+.pe-none{
+pointer-events: none;
+}
+
+
+/* media  */
+@media(max-width:768px){
+    .back img{
+        width: 70px;
+        margin-top: 40px;
+    }
+}
