@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="position-relative">
+
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Memory Game</title>
+</head>
+
+<body>
+
+    <div class="splash-screen w-100  h-100 position-absolute top-0 start-0">
+        <span class="btn btn-primary position-absolute top-50 start-50 translate-middle">Start Game</span>
+    </div>
+    <div class=" continue d-flex flex-column  justify-content-center w-50 align-items-center h-50 text-bg-success  position-absolute top-50 start-50 translate-middle rounded d-none" style="z-index: 1; transition: 0.5s; font-size: 30px; gap: 90px; ">Congratulatio
+    <span class="btn btn-primary">Start New Game</span>
+    </div>
+    <div class="container mx-auto mt-3">
+        <div class="info d-flex justify-content-between align-items-center border-blue bg-ccc p-3">
+            <div>
+                Hello : <span class="name"></span>
+            </div>
+            <div>
+                Time : <span class="time"></span>
+            </div>
+            <div>
+                Wrong Tries : <span class="tries">0</span>
+            </div>
+        </div>
+        <div class="memory-game-blocks row m-0 gy-3  row-cols-md-5 mt-3">
+            <div class="col-4" >
+                <div class="game-block p-0 border-blue position-relative  " data-technology="one"  style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/Angular_full_color_logo.svg.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  " data-technology="one" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/Angular_full_color_logo.svg.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  " data-technology="two" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/download.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  "data-technology="two" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/download.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  "data-technology="three" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/unnamed.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  " data-technology="three" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/unnamed.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  " data-technology="four" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/1000_F_386459614_7JRoaj5LBSbum74i1LXf3oaoMnxQwJdu.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  " data-technology="four" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/1000_F_386459614_7JRoaj5LBSbum74i1LXf3oaoMnxQwJdu.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  "data-technology="five" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/react-logo-vector-1.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  " data-technology="five" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/react-logo-vector-1.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  " data-technology="sex" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/1402.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  " data-technology="sex" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/1402.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  " data-technology="seven" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/download (1).png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  " data-technology="seven" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/download (1).png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  " data-technology="eight" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/download (2).png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  " data-technology="eight" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/download (2).png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  " data-technology="nine" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/phppng.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="game-block p-0 border-blue position-relative  " data-technology="nine" style="height: 150px;">
+                    <div class="front bg-front text-center  w-100 h-100 position-absolute"
+                        style="color: white; font-size: 90px;">!</div>
+                    <div class="back text-center  w-100 h-100 bg-back position-absolute">
+                        <img src="./images/phppng.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio src="./audio/37962223_successful_by_eskoma_preview.mp3" class="success"></audio>
+    <audio src="./audio/1265450_fail-tuba_by_reachground_preview.mp3" class="fail"></audio>
+    <audio src="./audio/18545634_congratulations-applause_by_googleeman_preview.mp3" class="congratulation"></audio>
+    <audio src="./audio/46644291_game-over-16_by_hotbanger_preview.mp3"class="game-over"></audio>
+    <audio src="./audio/45632475_game-start_by_studio-j_preview.mp3"class="start-game"></audio>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
